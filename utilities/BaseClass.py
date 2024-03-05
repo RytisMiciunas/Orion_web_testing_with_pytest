@@ -26,11 +26,8 @@ class BaseClass(LogClass):
 
     @pytest.fixture
     def setup(self):
-        # self.home_page.press_on_career_button()
 
-        # self.path = os.path.dirname(os.path.abspath(sys.argv[0]))
-
-        self.path = r"C:\Users\rmiciun\source\repos\PycharmProjects\PythonTesting"
+        self.path = os.getcwd()
         log_obj = LogClass()
         # self.home_page = HomePage(self.driver)
         self.log = log_obj.get_logger()

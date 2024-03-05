@@ -22,5 +22,4 @@ class CareersPage:
         self.driver.find_element(*variables.selecting_sales_xpath).click()
 
     def search_for_job_position(self):
-        # self.driver.find_element(*variables.search_for_jobs_button_id).click()
         self.driver.find_element(*variables.search_for_jobs_button_xpath).click()

@@ -20,7 +20,7 @@ class HomePage:
         self.driver.find_element(*variables.accept_cookie_button_id).click()
 
     def press_on_career_button(self):
-        career_button = self.driver.find_element(*variables.careers_linked_text)
+        career_button = self.driver.find_element(By.LINK_TEXT, variables.careers_linked_text[1])
         self.wait.until(EC.element_to_be_clickable(career_button))
         career_button.click()
 
@@ -32,5 +32,6 @@ class HomePage:
             except:
                 self.driver.find_element(By.CLASS_NAME, variables.next_carousel_option_button_class[1]).click()
                 time.sleep(1)
+
     def open_locations_page(self):
         self.driver.find_element(By.LINK_TEXT, variables.locations_page_button_linked_text[1]).click()
