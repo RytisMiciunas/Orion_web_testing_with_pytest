@@ -28,7 +28,6 @@ football_interview_transcript_id = ("id", "transcript-control-bar-button")
 football_interview_time_bar_xpath = ("xpath", "//div[@aria-label='Progress Bar']")
 locations_page_button_linked_text = ("partial_link_text", "Locations")
 open_map_button_xpath = ("xpath", "//article[@id='post-19']/div[3]/div/div[2]/div/div[3]/div/div[3]/div/div[1]/a")
-accept_google_cookies_xpath = ("xpath", "//span[contains(text(), 'Priimti viską')]")
 map_icon_wrapper_xpath = ("xpath", "//article[@id='post-19']/div[3]/div/div[2]/div/div[3]/div/div[3]/div/div[1]/img")
 
 

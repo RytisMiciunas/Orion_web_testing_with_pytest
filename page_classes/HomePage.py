@@ -1,8 +1,6 @@
 import time
 
-from page_classes.CareersPage import CareersPage
 from variable_values import variables
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 

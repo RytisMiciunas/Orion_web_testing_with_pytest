@@ -11,7 +11,7 @@ class TestFirstTest(TestClass):
     @pytest.mark.usefixtures("setup")
     def test_orion_applying_to_job(self):
         test_class_obj = TestClass()
-        test_class_obj.konstructor(self.driver, self.wait, self.path)
+        test_class_obj.konstructor(self.driver, self.wait, self.path, self.action)
         test_class_obj.home_page.maximize_window()
         test_class_obj.home_page.accept_cookies()
         test_class_obj.home_page.press_on_career_button()
