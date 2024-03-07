@@ -1,13 +1,9 @@
-from selenium.webdriver.common.by import By
-from page_classes.PossibleJobPositionsPage import PossibleJobPositionsPage
 from variable_values import variables
 
 
 class CareersPage:
-    def __init__(self, driver, wait, path):
+    def __init__(self, driver):
         self.driver = driver
-        self.wait = wait
-        self.path = path
 
     def open_location_dropbox(self):
         self.driver.find_element(*variables.location_dropbox_xpath).click()

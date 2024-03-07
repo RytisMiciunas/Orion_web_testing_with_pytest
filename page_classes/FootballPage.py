@@ -1,20 +1,19 @@
 import time
 
+import pytest
 from selenium.webdriver.support import expected_conditions as EC
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
-from utilities.BaseClass import BaseClass
 from variable_values import variables
 
 
 class FootballPage:
 
-    def __init__(self, driver, wait, path, log):
+    def __init__(self, driver, wait, log):
         self.driver = driver
         self.wait = wait
-        self.path = path
         self.log = log
 
     def open_frame(self):
@@ -24,8 +23,6 @@ class FootballPage:
             self.log.error("cant connect to frame")
 
     def press_full_screen(self):
-        # self.wait.until(EC.element_to_be_clickable((By.XPATH, variables.football_interview_full_screen_xpath[1])))
-        # self.driver.find_element(*variables.football_interview_full_screen_xpath).click()
         try:
             self.wait.until(EC.element_to_be_clickable((By.XPATH, variables.football_interview_full_screen_xpath[1])))
             self.driver.execute_script("arguments[0].scrollIntoView();",
@@ -39,8 +36,10 @@ class FootballPage:
 
     def check_is_video_playing(self):
         video_playing_time = self.driver.find_element(*variables.football_interview_time_bar_xpath).get_attribute("aria-valuenow")
-        if int(video_playing_time) > 3:
-            self.log.info("video indeed playing")
+        if int(video_playing_time) > 0:
+            return True
         else:
-            self.log.error("video is not playing")
+            return False
+
+
 

@@ -29,8 +29,13 @@ football_interview_time_bar_xpath = ("xpath", "//div[@aria-label='Progress Bar']
 locations_page_button_linked_text = ("partial_link_text", "Locations")
 open_map_button_xpath = ("xpath", "//article[@id='post-19']/div[3]/div/div[2]/div/div[3]/div/div[3]/div/div[1]/a")
 map_icon_wrapper_xpath = ("xpath", "//article[@id='post-19']/div[3]/div/div[2]/div/div[3]/div/div[3]/div/div[1]/img")
-
-
+sign_me_up_button_id = ("id", "gform_submit_button_1")
+search_button_class = ("class_name", "search-icon")
+work_email_input_in_home_page_id = ("id", "input_1_2")
+first_name_input_in_home_page_id = ("id", "input_1_3")
+work_email_input_validation_in_home_page_id = ("id", "validation_message_1_2")
+first_name_input_validation_in_home_page_id = ("id", "validation_message_1_3")
+job_title_input_validation_in_home_page_id = ("id", "validation_message_1_8")
 
 
 

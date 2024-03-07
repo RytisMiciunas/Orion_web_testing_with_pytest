@@ -1,4 +1,7 @@
 import time
+
+import pytest
+
 import Logging
 import names
 
@@ -66,4 +69,8 @@ class SeniorTestAutomationEngineer:
         self.driver.find_element(*variables.agree_with_policy_checkbox_xpath).click()
 
     def submit_form(self):
-        self.driver.find_element(*variables.submit_form_button_id).click()
+        try:
+            self.driver.find_element(*variables.submit_form_button_id).click()
+            return True
+        except:
+            return False

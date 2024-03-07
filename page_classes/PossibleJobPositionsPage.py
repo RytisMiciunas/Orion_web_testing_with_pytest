@@ -8,10 +8,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class PossibleJobPositionsPage:
-    def __init__(self, driver, wait, path):
+    def __init__(self, driver, wait):
         self.driver = driver
         self.wait = wait
-        self.path = path
 
     def select_technology_and_engineering_checkbox(self):
         self.driver.find_element(*variables.technology_and_engineering_checkbox_xpath).click()
